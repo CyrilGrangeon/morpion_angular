@@ -1,0 +1,14 @@
+
+
+<h1 class="center">Le jeu du morpion</h1>
+<div class="butonCenter">
+<button class="button button1" (click)="newGame()" type="button">New Game</button>
+</div>
+<h2 class="center"winner>Fin de partie : {{ winner }} </h2>
+
+
+<div id="board">
+	<div *ngFor="let cell of board; index as i" (click)="makeMove(i)">
+		{{ cell }}
+	</div>
+</div>
